@@ -19,7 +19,7 @@ In the root folder, on the terminal create a virtual environment.
    1. `django-admin startproject backend`
 3. `cd` to the backend folder
 4. Create an app in django in the terminal
-    1. `python manage.py startapp [name of the app]`
+    1. `python manage.py startapp mydjangoapp`
   
 ### 3) Create a react app using vite
 Go back to the root folder and:
@@ -55,17 +55,17 @@ Go back to the root folder and:
       'django.contrib.sessions',
       'django.contrib.messages',
       'django.contrib.staticfiles',
-      External Apps
-      'rest_framework',
-      'corsheaders',
-      Internal Apps
-      'main',
+      # External Apps
+      'rest_framework',  # add this line
+      'corsheaders',  # add this line
+      # Internal Apps
+      'mydjangoapp',  # add this line
   ]
   
   MIDDLEWARE = [
       'django.middleware.security.SecurityMiddleware',
       'django.contrib.sessions.middleware.SessionMiddleware',
-      "corsheaders.middleware.CorsMiddleware",
+      'corsheaders.middleware.CorsMiddleware',  # add this line
       'django.middleware.common.CommonMiddleware',
       'django.middleware.csrf.CsrfViewMiddleware',
       'django.contrib.auth.middleware.AuthenticationMiddleware',
